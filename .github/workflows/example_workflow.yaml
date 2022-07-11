@@ -1,4 +1,4 @@
-name: GitHub Downloader
+name: OCR PDF Action
 # Define when to run job here
 on: [push, pull_request]
 
@@ -15,7 +15,7 @@ jobs:
         output_file: .github/example_pdfs/output_searchable.pdf
         
      # Commit the updates
-    - name: Commit and Push Downloaded Files 
+    - name: Commit and Push PDF File
       run: |
          git config --global user.name "github-actions[bot]"
          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
