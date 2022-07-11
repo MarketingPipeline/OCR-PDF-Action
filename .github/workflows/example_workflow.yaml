@@ -11,8 +11,8 @@ jobs:
     - uses: MarketingPipeline/OCR-PDF-Action@main
       with:
         # Define the folder or file to download
-        input_file: Non-text-searchable.pdf
-        output_file: output_searchable.pdf
+        input_file: .github/example_pdfs/Non-text-searchable.pdf
+        output_file: .github/example_pdfs/output_searchable.pdf
         
      # Commit the updates
     - name: Commit and Push Downloaded Files 
@@ -20,5 +20,5 @@ jobs:
          git config --global user.name "github-actions[bot]"
          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
          git add -A
-         git commit -m "Added Downloaded File"
+         git commit -m "Added OCR PDF"
          git push
