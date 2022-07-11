@@ -1,14 +1,14 @@
-name: 'Action name'
-description: 'Action description'
-author: 'italia'
+name: 'OCR PDF Action'
+description: 'Turn scanned PDFs into searchable documents'
+author: 'github.com/MarketingPipeline'
 
 inputs:
   input_file:
-    description: 'File Path To Place Files'
+    description: 'Input PDF filepath'
     default: ''
     required: true
   output_file:
-    description: 'GitHub repository italia/publiccode-parser-action'
+    description: 'Output PDF filepath'
     default: ''
     required: true
 
