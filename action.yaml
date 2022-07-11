@@ -1,0 +1,24 @@
+name: 'Action name'
+description: 'Action description'
+author: 'italia'
+
+inputs:
+  input_file:
+    description: 'File Path To Place Files'
+    default: ''
+    required: true
+  output_file:
+    description: 'GitHub repository italia/publiccode-parser-action'
+    default: ''
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.input_file }}
+    - ${{ inputs.output_file }}
+
+branding:
+  icon: 'activity'
+  color: 'white'
