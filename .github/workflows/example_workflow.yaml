@@ -12,7 +12,7 @@ jobs:
       with:
         # Define the folder or file to download
         input_file: .github/example_pdfs/Non-text-searchable.pdf
-        output_file: .github/example_pdfs/output_searchable.pdf
+    #    output_file: .github/example_pdfs/output_searchable.pdf
         
      # Commit the updates
     - name: Commit and Push PDF File
