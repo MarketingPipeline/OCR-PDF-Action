@@ -5,7 +5,7 @@ on: [push, pull_request]
 jobs:
   example_job:
     runs-on: ubuntu-latest
-    name: Runing Github Downloader
+    name: Runing OCR PDF Action
     steps:
     - uses: actions/checkout@v2
     - uses: MarketingPipeline/OCR-PDF-Action@main
