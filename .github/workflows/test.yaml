@@ -35,14 +35,12 @@ jobs:
       # Chromium is already installed!
       # - name: Install software
       #   run: sudo apt install -y chromium-browser
-      - name: Install all necessary packages
-        run: pip install requests beautifulsoup4 pandas chromedriver-autoinstaller selenium pyvirtualdisplay 
       - name: Install xvfb
         run: sudo apt-get install ocrmypdf
       - name: Run the script
         working-directory: ./
         run: |
-         ocrmypdf input_scanned.pdf  output_searchable.pdf
+         ocrmypdf Non-text-searchable.pdf  output_searchable.pdf
 
       - name: Commit and Push
         run: |
