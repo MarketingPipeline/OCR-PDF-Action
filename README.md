@@ -49,7 +49,7 @@ Example of non-searchable [PDF file](.github/example_pdfs/Non-text-searchable.pd
         input_file: .github/example_pdfs/Non-text-searchable.pdf
         output_file: .github/example_pdfs/output_searchable.pdf
         
-    - name: Commit and Push Downloaded Files
+    - name: Commit and Push PDF File
       run: |
          git config --global user.name "github-actions[bot]"
          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
