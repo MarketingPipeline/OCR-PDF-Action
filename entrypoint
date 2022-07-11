@@ -1,0 +1,32 @@
+#!/bin/bash
+
+#####################################################
+
+#####################################################
+INPUTFILE=$1
+OUTPUTFILE=$2
+
+
+
+### File Path Option
+if [ -z "$INPUTFILE" ]
+then
+      echo "\Input file was not provided, please provide a input file - closing the script."
+else
+      echo "\Input file was provided!"
+fi
+
+
+### Overwrite files
+
+if [ -z "$OVERWRITE"]
+then
+      echo "\OVERWRITE option was not chosen, files will not be overwritten"
+      OVERWRITE=""
+else
+      echo "\OVERWRITE option was chosen, files will be overwritten"
+      OVERWRITE="--force"
+fi
+
+
+ocrmypdf $INPUTFILE $OUTPUTFILE
