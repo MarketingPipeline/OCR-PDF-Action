@@ -1,0 +1,24 @@
+name: GitHub Downloader
+# Define when to run job here
+on: [push, pull_request]
+
+jobs:
+  example_job:
+    runs-on: ubuntu-latest
+    name: Runing Github Downloader
+    steps:
+    - uses: actions/checkout@v2
+    - uses: MarketingPipeline/OCR-PDF-Action@main
+      with:
+        # Define the folder or file to download
+        input_file: Non-text-searchable.pdf
+        output_file: output_searchable.pdf
+        
+     # Commit the updates
+    - name: Commit and Push Downloaded Files 
+      run: |
+         git config --global user.name "github-actions[bot]"
+         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+         git add -A
+         git commit -m "Added Downloaded File"
+         git push
