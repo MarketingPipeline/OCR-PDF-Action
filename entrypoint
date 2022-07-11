@@ -1,7 +1,8 @@
 #!/bin/bash
 
 #####################################################
-
+# OCR PDF Action
+# Created by github.com/MarketingPipeline
 #####################################################
 INPUTFILE=$1
 OUTPUTFILE=$2
@@ -11,7 +12,8 @@ OUTPUTFILE=$2
 ### File Path Option
 if [ -z "$INPUTFILE" ]
 then
-      echo "\Input file was not provided, please provide a input file - closing the script."
+      echo "\Input file was not provided or could not be found, please provide a valid input file location - closing the script."
+      exit 3 
 else
       echo "\Input file was provided!"
 fi
@@ -19,13 +21,12 @@ fi
 
 ### Overwrite files
 
-if [ -z "$OVERWRITE"]
+if [ -z "$OUTPUTFILE"]
 then
-      echo "\OVERWRITE option was not chosen, files will not be overwritten"
-      OVERWRITE=""
+      echo "\Output file was not provided or could not be found, please provide a valid output file location - closing the script."
+      exit 3 
 else
-      echo "\OVERWRITE option was chosen, files will be overwritten"
-      OVERWRITE="--force"
+      echo "\Output file was provided, starting script"
 fi
 
 
