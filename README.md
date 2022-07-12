@@ -85,7 +85,7 @@ Example [workflow file](.github/workflows/example_workflow.yaml)
             </tr>         
 	 <tr>
               <td>output_file</td>
-              <td>The path to put the output file output_file</td>
+              <td>The path to put the output PDF file</td>
               <td><code>undefined</code></td>
 	      <td>Yes</td>	    
             </tr>         
