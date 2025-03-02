@@ -2,10 +2,15 @@
 FROM debian:stable 
 
 ## Install linux / python dependencies 
-RUN apt-get update -y && apt-get install -y python3 python3-pip tesseract-ocr ghostscript
+RUN apt-get update -y && apt-get install -y \
+    python3 \
+    python3-pip \
+    tesseract-ocr \
+    ghostscript \
+    ocrmypdf
 
 ## Install python project dependencies
-RUN pip3 install ocrmypdf
+# RUN pip3 install ocrmypdf  # This can be skipped since we are now installing ocrmypdf via apt
 
 ## Copy the Entry Point
 COPY entrypoint /usr/local/bin/
