@@ -4,8 +4,8 @@
 # OCR PDF Action
 # Created by github.com/MarketingPipeline
 #####################################################
-INPUTFILE=$1
-OUTPUTFILE=$2
+INPUTFILE="$1"
+OUTPUTFILE="$2"
 
 
 
@@ -30,4 +30,4 @@ else
 fi
 
 
-ocrmypdf $INPUTFILE $OUTPUTFILE
+ocrmypdf "$INPUTFILE" "$OUTPUTFILE"
